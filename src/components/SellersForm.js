@@ -23,26 +23,34 @@ const SellersForm = (props) => {
 
   const categoryHandler = (e) => {
     setCategory1(e.target.value);
-  }
+  };
 
   const submitFormHandler = (e) => {
     e.preventDefault();
-    const product = {
-        id: productId,
-        sellingprice:sellingPrice,
-        productname: productName,
-        category: category1
-    }
-    props.onAddingProduct(product);
-
-  }
+    const productmentioned = {
+      id: productId,
+      sellingprice: sellingPrice,
+      productname: productName,
+      category: category1,
+    };
+    props.onAddingProduct(productmentioned);
+    setProductId("");
+    setSellingPrice("");
+    setProductName("");
+    setCategory1("");
+  };
 
   return (
     <Card className={classes.sellers_login}>
       <form onSubmit={submitFormHandler}>
         <div className={classes.control}>
           <label htmlFor="id">Product ID:</label>
-          <input type="number" id="id" onChange={productIdHandler} />
+          <input
+            type="number"
+            id="id"
+            onChange={productIdHandler}
+            value={productId}
+          />
         </div>
         <div className={classes.control}>
           <label htmlFor="sellingprice">Selling Price:</label>
@@ -50,11 +58,18 @@ const SellersForm = (props) => {
             type="number"
             id="sellingprice"
             onChange={sellingPriceHandler}
+            value={sellingPrice}
+            placeholder="₹"
           />
         </div>
         <div className={classes.control}>
           <label htmlFor="productname">Product Name:</label>
-          <input type="text" id="sellingprice" onChange={productNameHandler} />
+          <input
+            type="text"
+            id="sellingprice"
+            onChange={productNameHandler}
+            value={productName}
+          />
         </div>
         <div className={classes.control}>
           <label htmlFor="category">Choose a Category:</label>
@@ -62,6 +77,7 @@ const SellersForm = (props) => {
             id="category"
             className={classes.selectors}
             onChange={categoryHandler}
+            value={category1}
           >
             <option>Electronics</option>
             <option>Food</option>
