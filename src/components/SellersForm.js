@@ -7,7 +7,7 @@ const SellersForm = (props) => {
   const [productId, setProductId] = useState("");
   const [sellingPrice, setSellingPrice] = useState("");
   const [productName, setProductName] = useState("");
-  const [category1, setCategory1] = useState("");
+  const [category1, setCategory1] = useState();
 
   const productIdHandler = (e) => {
     setProductId(e.target.value);
@@ -28,7 +28,7 @@ const SellersForm = (props) => {
   const submitFormHandler = (e) => {
     e.preventDefault();
     const productmentioned = {
-      id: productId,
+      id: Math.random().toString(),
       sellingprice: sellingPrice,
       productname: productName,
       category: category1,
@@ -37,7 +37,7 @@ const SellersForm = (props) => {
     setProductId("");
     setSellingPrice("");
     setProductName("");
-    setCategory1("");
+    setCategory1();
   };
 
   return (

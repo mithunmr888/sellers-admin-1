@@ -36,7 +36,7 @@
 .control input:focus {
   outline: none;
   border-color: #ccc;
-  background: #ebf7ea;
+  background: #ffffff;
 }
 
 .control.invalid input {
@@ -56,7 +56,7 @@
 .selectors:focus-visible{
   outline: none;
   border-color: #ccc;
-  background: #ebf7ea;
+  background: #ffffff;
 }
 .actions {
   text-align: start;
