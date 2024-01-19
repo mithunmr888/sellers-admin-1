@@ -10,9 +10,7 @@ function App() {
   const addingProductHandler = (productmentioned) => {
     console.log(productmentioned);
     setEnteredProduct((prevstate) => {
-      const updatedProductDetails = [...prevstate];
-      updatedProductDetails.unshift(productmentioned);
-      return updatedProductDetails;
+      return [productmentioned, ...prevstate];
     });
   };
 

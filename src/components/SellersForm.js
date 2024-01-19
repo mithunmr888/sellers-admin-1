@@ -66,7 +66,7 @@ const SellersForm = (props) => {
           <label htmlFor="productname">Product Name:</label>
           <input
             type="text"
-            id="sellingprice"
+            id="productname"
             onChange={productNameHandler}
             value={productName}
           />

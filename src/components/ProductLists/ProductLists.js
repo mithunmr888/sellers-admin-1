@@ -4,18 +4,32 @@ import ProductList from "../ProductList/ProductList";
 import React from "react";
 
 const ProductLists = (props) => {
+  const categorizedProducts = {
+    Electronics: [],
+    Food: [],
+    Skincare: [],
+  };
+
+  props.products.forEach((product) => {
+    categorizedProducts[product.category].push(product);
+  });
+
   return (
     <Card className={classes.all_lists}>
       <h2>Products</h2>
-      <ul>
-        {props.products.map((product) => (
-          <ProductList
-            id={Math.random().toString()}
-            key={product.id}
-            onDeleteProduct={props.onDeleteProduct}
-          >{`${product.sellingprice} - ${product.category} - ${product.productname}`}</ProductList>
-        ))}
-      </ul>
+      {Object.keys(categorizedProducts).map((category) => (
+        <div key={category}>
+          <h3>{`${category} Items`}</h3>
+          <ul>
+            {categorizedProducts[category].map((product) => (
+              <ProductList
+                key={product.id}
+                onDeleteProduct={() => props.onDeleteProduct(product.id)}
+              >{`${product.sellingprice} - ${product.productname}`}</ProductList>
+            ))}
+          </ul>
+        </div>
+      ))}
     </Card>
   );
 };
