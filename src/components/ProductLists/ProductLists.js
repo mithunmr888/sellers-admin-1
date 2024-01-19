@@ -19,7 +19,7 @@ const ProductLists = (props) => {
       <h2>Products</h2>
       {Object.keys(categorizedProducts).map((category) => (
         <div key={category}>
-          <h3>{`${category} Items`}</h3>
+          <h4>{`${category} Items`}</h4>
           <ul>
             {categorizedProducts[category].map((product) => (
               <ProductList
