@@ -6,7 +6,7 @@
   font: inherit;
   background: white;
   cursor: pointer;
-  list-style: none;
+  list-style-type: none;
   max-width: 37rem;
   flex: 3;
   padding: 0.35rem 0.35rem;

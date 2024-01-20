@@ -4,7 +4,7 @@ import React from "react";
 const MainHeader = () => {
   return (
     <header className={classes["main-header"]}>
-      <h1> Sellers Admin</h1>;
+      <h1> Sellers   Admin</h1>
     </header>
   );
 };

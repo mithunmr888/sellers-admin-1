@@ -25,7 +25,7 @@ const ProductLists = (props) => {
                   key={product.id}
                   id={product.id}
                   onDelete={props.onDeleteProduct}
-                >{`${product.sellingprice} - ${product.productname}`}</ProductList>
+                >{`${product.sellingprice}₹ - ${product.productname}`}</ProductList>
               ))}
             </ul>
           </div>
