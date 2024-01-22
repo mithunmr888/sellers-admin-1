@@ -45,7 +45,7 @@ const ProductLists = (props) => {
   return (
     <Card className={classes.all_lists}>
       <h2>Products</h2>
-      {['Electronics', 'Food', 'Skincare'].map((category) => (
+      {["Electronics", "Food", "Skincare"].map((category) => (
         <div key={category}>
           <h4>{`${category} Items`}</h4>
           <ul>
