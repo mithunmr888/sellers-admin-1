@@ -7,7 +7,7 @@ const SellersForm = (props) => {
   const [productId, setProductId] = useState("");
   const [sellingPrice, setSellingPrice] = useState("");
   const [productName, setProductName] = useState("");
-  const [category1, setCategory1] = useState();
+  const [category1, setCategory1] = useState("");
 
   const productIdHandler = (e) => {
     setProductId(e.target.value);
@@ -27,6 +27,7 @@ const SellersForm = (props) => {
 
   const submitFormHandler = (e) => {
     e.preventDefault();
+    console.log(category1);
     const productmentioned = {
       id: Math.random().toString(),
       sellingprice: sellingPrice,
@@ -37,7 +38,7 @@ const SellersForm = (props) => {
     setProductId("");
     setSellingPrice("");
     setProductName("");
-    setCategory1();
+    setCategory1("");
   };
 
   return (
@@ -50,6 +51,7 @@ const SellersForm = (props) => {
             id="id"
             onChange={productIdHandler}
             value={productId}
+            placeholder="id..."
           />
         </div>
         <div className={classes.control}>
@@ -79,6 +81,9 @@ const SellersForm = (props) => {
             onChange={categoryHandler}
             value={category1}
           >
+            <option key="default" value="">
+              Select a Category
+            </option>
             <option>Electronics</option>
             <option>Food</option>
             <option>Skincare</option>

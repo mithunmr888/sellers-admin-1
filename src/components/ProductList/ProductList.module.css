@@ -14,36 +14,34 @@
   border: 1px solid #ccc;
 }
 
-
 .button {
-    font: inherit;
-    border: 1px solid #cdd5ce;
-    background: #ccc;
-    color: white;
-    padding: 0.1rem .3rem;
-    cursor: pointer;
-    font-size: .8rem;
-    border-radius: 30px;
-    margin-left: .5rem;
-  }
-  
-  .button:hover,
-  .button:active {
-    background: #6cb96d;
-    border-color: #61a257;
-  }
-  
-  .button:focus {
-    outline: none;
-  }
-  
-  button:disabled,
-  button:focus:disabled,
-  button:hover:disabled,
-  button:active:disabled {
-    background: #ccc;
-    border-color: #ccc;
-    color: #666666;
-    cursor: not-allowed;
-  }
-  
+  font: inherit;
+  border: 1px solid #cdd5ce;
+  background: #ccc;
+  color: white;
+  padding: 0.1rem 0.3rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+  border-radius: 30px;
+  margin-left: 0.5rem;
+}
+
+.button:hover,
+.button:active {
+  background: #6cb96d;
+  border-color: #61a257;
+}
+
+.button:focus {
+  outline: none;
+}
+
+button:disabled,
+button:focus:disabled,
+button:hover:disabled,
+button:active:disabled {
+  background: #ccc;
+  border-color: #ccc;
+  color: #666666;
+  cursor: not-allowed;
+}

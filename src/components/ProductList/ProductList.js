@@ -1,7 +1,7 @@
 import classes from "./ProductList.module.css";
 
 const ProductList = (props) => {
-  const deleteHandler = (props) => {
+  const deleteHandler = () => {
     props.onDelete(props.id);
   };
   return (
