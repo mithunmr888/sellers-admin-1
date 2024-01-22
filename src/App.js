@@ -8,10 +8,15 @@ import MainHeader from "./components/MainHeader/MainHeader";
 function App() {
   const [enteredProduct, setEnteredProduct] = useState([]);
 
- 
   const addingProductHandler = (productmentioned) => {
     console.log(productmentioned);
-    localStorage.setItem(productmentioned.id, JSON.stringify(productmentioned));
+    if (productmentioned.category.toString().length > 0) {
+      localStorage.setItem(
+        productmentioned.id,
+        JSON.stringify(productmentioned)
+      );
+    }
+
     setEnteredProduct((prevstate) => {
       const updatedProducts = [...prevstate];
       updatedProducts.push(productmentioned);
